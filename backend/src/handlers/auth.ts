@@ -1,7 +1,8 @@
-import { FastifyRequest } from 'fastify'
+import { AuthLoginBodyRequest } from '../types/handlers/auth';
 
-export const handlersLogin = async (request: FastifyRequest) => {
-    return 'handlersLogin'
+export const handlersLogin = async (req: AuthLoginBodyRequest) => {
+    const { username, password } = req.body
+    return `handlersLogin (${username}, ${password})`
 }
 
 export default {
